@@ -186,6 +186,13 @@ export function injectMetadata(options: InjectMetadataOptions): Response {
   document.body.appendChild(button);
   document.body.appendChild(dialog);
 
+  // Close dialog when clicking outside (on backdrop)
+  dialog.addEventListener('click', (e) => {
+    if (e.target === dialog) {
+      dialog.close();
+    }
+  });
+
   // Store in window for programmatic access
   window.__GENERATION_METADATA__ = metadata;
 })();

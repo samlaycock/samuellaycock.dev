@@ -96,6 +96,27 @@ app.get("/", async (c) => {
   });
 });
 
+// Favicon endpoint
+app.get("/favicon.svg", (c) => {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="url(#grad)"/>
+  <text x="50" y="70" font-family="system-ui,-apple-system,sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">S</text>
+</svg>`;
+
+  return c.body(svg, {
+    headers: {
+      "Content-Type": "image/svg+xml",
+      "Cache-Control": "public, max-age=86400",
+    },
+  });
+});
+
 // Health check endpoint
 app.get("/health", (c) => {
   return c.json({ status: "ok", timestamp: Date.now() });

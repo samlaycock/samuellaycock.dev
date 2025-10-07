@@ -191,12 +191,21 @@ export function injectMetadata(options: InjectMetadataOptions): Response {
 })();
 </script>`;
 
-  // Use HTMLRewriter to inject the script before </body>
-  const rewriter = new HTMLRewriter().on("body", {
-    element(element) {
-      element.append(metadataScript, { html: true });
-    },
-  });
+  // Create favicon link to inject in head
+  const faviconLink = `<link rel="icon" type="image/svg+xml" href="/favicon.svg">`;
+
+  // Use HTMLRewriter to inject the favicon in <head> and script in <body>
+  const rewriter = new HTMLRewriter()
+    .on("head", {
+      element(element) {
+        element.append(faviconLink, { html: true });
+      },
+    })
+    .on("body", {
+      element(element) {
+        element.append(metadataScript, { html: true });
+      },
+    });
 
   return rewriter.transform(
     new Response(html, {

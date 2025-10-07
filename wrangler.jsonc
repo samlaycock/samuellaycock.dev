@@ -1,0 +1,36 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "samuellaycockdev",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-10-04",
+  "observability": {
+    "enabled": true,
+  },
+  "routes": [
+    {
+      "pattern": "samuellaycock.dev",
+      "custom_domain": true,
+    },
+    {
+      "pattern": "www.samuellaycock.dev",
+      "custom_domain": true,
+    },
+  ],
+  "triggers": {
+    "crons": ["0 0 * * *"],
+  },
+  "kv_namespaces": [
+    {
+      "binding": "WEBSITE_KV",
+      "id": "406a1f6e394b4a3eaaae81b3e27da6ee",
+      "preview_id": "preview_id",
+    },
+  ],
+  "workflows": [
+    {
+      "name": "website-generator",
+      "binding": "WEBSITE_GENERATOR",
+      "class_name": "WebsiteGeneratorWorkflow",
+    },
+  ],
+}

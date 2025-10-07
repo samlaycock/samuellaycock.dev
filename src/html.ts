@@ -150,6 +150,9 @@ export function injectMetadata(options: InjectMetadataOptions): Response {
         Each day brings a unique design, created from scratch with full creative freedom.
         The entire page—HTML, CSS, and JavaScript—is generated in a single request.
       </p>
+      <p style="margin: 0 0 20px 0; color: #666; line-height: 1.6;">
+        <a href="https://github.com/samlaycock/samuellaycock.dev" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none; font-weight: 600;">View the source code on GitHub →</a>
+      </p>
       <h3 style="margin: 0 0 12px 0; font-size: 16px;">Generation Details</h3>
       <dl>
         <dt>Date:</dt><dd>\${metadata.date}</dd>

@@ -99,6 +99,7 @@ export function injectMetadata(options: InjectMetadataOptions): Response {
       letter-spacing: normal !important;
       word-spacing: normal !important;
       text-transform: none !important;
+      color: inherit !important;
     }
     .gen-info-content {
       padding: 20px;

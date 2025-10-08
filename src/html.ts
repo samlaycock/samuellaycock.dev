@@ -93,6 +93,13 @@ export function injectMetadata(options: InjectMetadataOptions): Response {
       background: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(4px);
     }
+    #gen-info-dialog * {
+      text-shadow: none !important;
+      font-family: inherit !important;
+      letter-spacing: normal !important;
+      word-spacing: normal !important;
+      text-transform: none !important;
+    }
     .gen-info-content {
       padding: 20px;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

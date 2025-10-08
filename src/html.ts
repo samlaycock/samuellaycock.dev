@@ -93,19 +93,18 @@ export function injectMetadata(options: InjectMetadataOptions): Response {
       background: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(4px);
     }
+    #gen-info-dialog {
+      color: black;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
     #gen-info-dialog * {
       text-shadow: none !important;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
       letter-spacing: normal !important;
       word-spacing: normal !important;
       text-transform: none !important;
     }
-    #gen-info-dialog *:not(button) {
-      color: black !important;
-    }
     .gen-info-content {
       padding: 20px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     }
     @media (min-width: 640px) {
       .gen-info-content {

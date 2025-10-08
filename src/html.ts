@@ -111,10 +111,6 @@ export function injectMetadata(options: InjectMetadataOptions): Response {
         padding: 24px;
       }
     }
-    .gen-info-content h2 {
-      margin: 0 0 16px 0;
-      font-size: 20px;
-    }
     .gen-info-content dl {
       margin: 0;
       display: grid;
@@ -153,7 +149,7 @@ export function injectMetadata(options: InjectMetadataOptions): Response {
   dialog.innerHTML = \`
     <div class="gen-info-content">
       <div autofocus tabindex="-1" style="outline: none;"></div>
-      <h2>🎨 AI-Generated Website</h2>
+      <h2 style="margin: 0 0 16px 0; font-size: 20px; color: black;">🎨 AI-Generated Website</h2>
       <p style="margin: 0 0 20px 0; color: #666; line-height: 1.6;">
         This website is completely regenerated every night at midnight by a different AI model.
         Each day brings a unique design, created from scratch with full creative freedom.
@@ -162,7 +158,7 @@ export function injectMetadata(options: InjectMetadataOptions): Response {
       <p style="margin: 0 0 20px 0; color: #666; line-height: 1.6;">
         <a href="https://github.com/samlaycock/samuellaycock.dev" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none; font-weight: 600;">View the source code on GitHub →</a>
       </p>
-      <h3 style="margin: 0 0 12px 0; font-size: 16px;">Generation Details</h3>
+      <h3 style="margin: 0 0 12px 0; font-size: 16px; color: black;">Generation Details</h3>
       <dl>
         <dt>Date:</dt><dd>\${metadata.date}</dd>
         <dt>Model:</dt><dd>\${metadata.model}</dd>
@@ -174,7 +170,7 @@ export function injectMetadata(options: InjectMetadataOptions): Response {
         \${metadata.generation.cost ? '<dt>Cost:</dt><dd>$' + metadata.generation.cost.toFixed(4) + '</dd>' : ''}
       </dl>
       <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee;">
-        <h3 style="margin: 0 0 12px 0; font-size: 16px;">View Another Date</h3>
+        <h3 style="margin: 0 0 12px 0; font-size: 16px; color: black;">View Another Date</h3>
         <div style="display: flex; gap: 8px;">
           <input
             type="date"

@@ -131,7 +131,7 @@ export function injectMetadata(options: InjectMetadataOptions): Response {
       margin-top: 20px;
       padding: 10px 20px;
       background: #000;
-      color: #fff;
+      color: #fff !important;
       border: none;
       border-radius: 6px;
       cursor: pointer;
@@ -184,7 +184,7 @@ export function injectMetadata(options: InjectMetadataOptions): Response {
           />
           <button
             onclick="const date = document.getElementById('date-picker').value; if (date) window.location.href = '/?date=' + date;"
-            style="padding: 8px 16px; background: #000; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; white-space: nowrap;"
+            style="padding: 8px 16px; background: #000; color: #fff !important; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; white-space: nowrap;"
           >
             Go
           </button>
